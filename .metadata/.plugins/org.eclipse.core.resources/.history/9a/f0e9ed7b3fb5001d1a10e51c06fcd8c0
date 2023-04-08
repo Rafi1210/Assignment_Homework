@@ -1,0 +1,29 @@
+package practice;
+
+public class arrStudent {
+	int id;
+	double cg;
+	arrStudent() {
+	}
+	
+	void input(int i , double c) {
+		id = i;
+	    cg = c;
+	}
+	void display() {
+	System.out.println(id+" "+cg);	
+	}
+
+	arrStudent[] s = new arrStudent[5];
+    int i;{
+
+    for(i =0; i<s.length;i++) {
+    	s[i] = new arrStudent();
+    	int id = input.nextInt();
+    	double cg = input.nextDouble();
+    	s[i].input(id, cg);
+    	s[i].display();
+    	
+    }
+    }
+}

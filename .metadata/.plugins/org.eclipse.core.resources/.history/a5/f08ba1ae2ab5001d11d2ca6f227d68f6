@@ -1,0 +1,34 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Student {
+	
+	int id;
+	double cg;
+	Student() {
+	}
+	
+	void input(int i , double c) {
+		id = i;
+	    cg = c;
+	}
+	void display() {
+	System.out.println(id+" "+cg);	
+	}
+
+	class main{
+	public static void main(String[] args) {
+	
+		Scanner input = new Scanner(System.in);
+		Student s1;
+		s1 = new Student();
+		s1.id = 1;
+		s1.cg = 3.8;
+		System.out.println();
+		
+	}
+		
+	}
+
+}

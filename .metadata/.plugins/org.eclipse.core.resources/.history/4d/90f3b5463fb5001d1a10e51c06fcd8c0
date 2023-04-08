@@ -1,0 +1,19 @@
+package practice;
+
+import java.util.Scanner;
+
+public class arrStudent {
+    Scanner input = new Scanner(System.in);
+	Student[] s = new Student[5];
+    int row;{
+
+    for(row =0; row<s.length;row++) {
+    	s[row] = new Student();
+    	int id = input.nextInt();
+    	double cg = input.nextDouble();
+    	s[row].input(id, cg);
+    	s[row].display();
+    	
+    }
+    }
+}

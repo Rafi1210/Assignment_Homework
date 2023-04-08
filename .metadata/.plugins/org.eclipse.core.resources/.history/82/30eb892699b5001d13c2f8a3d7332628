@@ -1,0 +1,21 @@
+package LAB_3;
+
+import java.util.Scanner;
+
+public class exercise_2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int[] array = new int[100];
+		int i ;
+		
+		System.out.println("Enter number of students :");
+		int index = input.nextInt();
+		System.out.println("Enter "+index+" scores : ");
+		for( i =0 ;i<index ; i++) {	
+			System.out.print("arr["+i+"] = ");
+			array[i] = input.nextInt();
+			}
+	}
+
+}

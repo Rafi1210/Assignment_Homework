@@ -1,0 +1,13 @@
+package practice;
+
+public class Main {
+
+	public static void main(String[] args) {
+Student rashed  = new Student();
+		
+		rashed.input(187, 3.84);
+		
+		rashed.display();
+	}
+
+}

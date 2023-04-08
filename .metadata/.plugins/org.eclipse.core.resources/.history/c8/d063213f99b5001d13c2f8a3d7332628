@@ -1,0 +1,30 @@
+package LAB_3;
+
+import java.util.Scanner;
+
+public class exercise_2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int[] array = new int[100];
+		int i, count = 0  ;
+		
+		System.out.println("Enter the integer between 1 to 100 : ");
+		for( i =0 ;i<array.length ; i++) {	
+			array[i] = input.nextInt();
+			}
+		while(array[i] > 0 && array[i] < 100) {
+			
+			count+=array[i];
+			System.out.println(i+" occurs" + count+ " times");
+			
+			if (array[i]==0) {
+				break;
+			}
+		
+		}
+		
+	}
+		
+
+}

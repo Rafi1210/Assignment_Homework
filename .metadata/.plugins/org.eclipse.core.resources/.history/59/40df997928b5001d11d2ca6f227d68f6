@@ -1,0 +1,21 @@
+package practice;
+
+public class Circle {
+	double rad = 3 ;
+	Circle()
+	{
+		
+	}
+	
+	Circle(double r){
+		rad = r;
+	}
+	double getArea() {
+		return rad*rad*3.14;
+	}
+	public static void main(String[] args) {
+
+		
+	}
+
+}

@@ -1,0 +1,57 @@
+package practice;
+
+import java.util.ArrayList;
+
+class Car{
+	private int VIN;
+	private String company;
+
+	private ArrayList<Customer> customers;
+     Car() {
+	}
+	public Car(int VIN, String company){
+		this.VIN=VIN;
+		this.company=company;
+		customers = new ArrayList<Customer>();
+		
+	}
+	public void addCustomer(Customer customer) {
+		customers.add(customer);
+	}
+	public int getnumberofCustomers() {
+		return customers.size();
+	}
+
+}
+
+class Customer{
+	private String name;
+	private String number;
+	Customer(){
+		
+	}
+	public Customer(String name, String number) {
+		this.name=name;
+		this.number=number;
+	}
+	public String getname() {
+		return name;
+	}
+	public void addCar(Car c) {
+		
+	}
+	public int getnumberofCar() {
+		return 0;
+	}
+	
+}
+
+
+public class car_association {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

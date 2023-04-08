@@ -1,0 +1,13 @@
+
+//summing all elements
+
+package homework_2_Array;
+
+public class OneD4_sum_elements_arr {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

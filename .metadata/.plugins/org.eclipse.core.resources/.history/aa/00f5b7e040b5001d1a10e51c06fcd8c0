@@ -1,0 +1,18 @@
+package practice;
+public class Student {
+	
+	int id;
+	double cg;
+	Student() {
+	}
+	
+	void input(int i , double c) {
+		id = i;
+	    cg = c;
+	}
+	void display() {
+	System.out.println(id+" "+cg);	
+	}
+
+
+}

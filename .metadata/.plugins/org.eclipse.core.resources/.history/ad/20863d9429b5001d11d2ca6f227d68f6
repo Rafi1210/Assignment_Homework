@@ -1,0 +1,28 @@
+package practice;
+
+public class Student {
+	
+	int id;
+	double cg;
+	public Student() {
+	}
+	void input(int i , double c) {
+		id = i;
+	    cg = c;
+	}
+	void display() {
+	System.out.println(id+" "+cg);	
+	}
+
+	class main{
+	public static void main(String[] args) {
+	
+		Student rashed = new Student();
+		rashed.input(186, 3.8);
+	
+		rashed.display();
+	}
+		
+	}
+
+}

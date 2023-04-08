@@ -1,0 +1,82 @@
+package polymorphism;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class Account {
+
+	private int id;
+	private double balance;
+	private double annualInterestRate ;
+	private Calendar dateCreated;
+	
+	Account() {	
+		id = 0;
+	balance = 0.0;
+	annualInterestRate = 0.0;
+	}
+	public Account(int id, double balance, double annualInterestRate) {
+		this.id = id;
+		this.balance=balance;
+		this.annualInterestRate=annualInterestRate;
+		this.dateCreated = Calendar.getInstance();
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	public double getAnnualInterestRate() {
+		return annualInterestRate;
+	}
+	public void setAnnualInterestRate(double annualInterestRate) {
+		
+		this.annualInterestRate = (annualInterestRate*getBalance())/100;
+	}
+	public Calendar getDateCreated() {
+		return dateCreated;
+	}
+	public double getMonthlyInterestRate() {
+	return (getAnnualInterestRate()/12)/100;
+	}
+	public double getMonthlyInterestAmount(){
+		return (getBalance()*getMonthlyInterestRate());	
+	}
+	
+	
+	//ma'am
+	public Date getdateCretaed() {
+		return dateCreated.getTime();
+	}
+	
+	
+	
+	
+	
+	
+	public void withdraw(double withdrawBalance) {
+		while (balance!=0) {
+//			balance = balance - withdrawBalance;
+			withdrawBalance-= balance;
+			setBalance(withdrawBalance);
+		}
+	}
+	public void deposit(double depositeBalance) {
+//		balance = balance + withdrawBalance;
+
+	depositeBalance+= balance;	
+	setBalance(depositeBalance);
+	}
+	
+	public void display() {
+		System.out.println(id + " "+ balance+" " + annualInterestRate + " " + getDateCreated());
+	}
+	
+}

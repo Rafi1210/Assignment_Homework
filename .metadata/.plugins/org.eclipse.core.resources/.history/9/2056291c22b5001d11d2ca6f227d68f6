@@ -1,0 +1,64 @@
+package practice;
+
+import java.util.*;
+
+public class Practice {
+	static Scanner myScanner = new Scanner(System.in);
+	static String[] books = {"Java", "C" , "Python"};
+ 	static final double studentDiscount = 0.3;
+	static final double teacherDiscount = 0.4;
+	static final double alienDiscount   = 0.0;  
+	public static void main(String[] args) {
+		 prln("\n\n~~~~WELCOME TO OUR BOOKSTORE~~~~" );
+		 prln("Which Book do you want? \n Ans: ");
+		 String userChoice = myScanner.next();
+		 if(books[0].toLowerCase().equals(userChoice.toLowerCase())) {
+			 prln("You opted for "+ books[0]+" Book.");
+			 calculatedPrice(books[0]);
+		 }
+		 else if(books[1].toLowerCase().equals(userChoice.toLowerCase())) {	 
+			 prln("You opted for "+ books[1]+" Book.");
+			 calculatedPrice(books[1]);
+		 }
+		 else if (books[2].toLowerCase().equals(userChoice.toLowerCase())) {	 
+			 prln("You opted for "+ books[2]+" Book.");
+			 calculatedPrice(books[2]);
+		 }
+		 else {
+			 prln("Sorry, we don't have this book.");
+		 }
+	}	
+	static void calculatedPrice(String bookName) {
+		prln("Are you a Student , Teacher , Alien? \n Ans: ");
+		String answer= myScanner.next();
+		double price = 200;		
+		if(answer.toLowerCase().equals("teacher")) {
+			double BookPrice = price -(price * teacherDiscount);
+			prln("You have got 40% Discount");
+		        showPrice(BookPrice);
+		}		
+		else if(answer.toLowerCase().equals("student")) {
+		double BookPrice = price -(price * studentDiscount);
+		prln("You have got 30% Discount");
+		showPrice(BookPrice);
+		}
+		else if(answer.toLowerCase().equals("alien")) {
+			double BookPrice = price -(price * alienDiscount);
+			prln("You have got 0% Discount");
+			showPrice(BookPrice);
+		}
+		else {
+			prln("Sorry, we can't serve you");
+		}
+	}
+	
+	static void showPrice(double Bookprice) {
+		prln("Your total payable amount : " + Bookprice);		
+		prln("\n ~~THANK YOU FOR SHOPPING FROM OUR BOOKSTORE~~");
+	}	
+	static void prln(Object anyObject) {
+		System.out.println(anyObject);
+
+	}
+
+}

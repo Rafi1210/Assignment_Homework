@@ -1,0 +1,17 @@
+package practice;
+
+import java.util.Scanner;
+
+public class arraymain {
+
+	public static void main(String[] args) {
+
+		
+		Scanner input = new Scanner(System.in);
+		arrStudent s1 ,s2;
+		s1 = new arrStudent();
+		s2 = new arrStudent();
+		
+	}
+
+}

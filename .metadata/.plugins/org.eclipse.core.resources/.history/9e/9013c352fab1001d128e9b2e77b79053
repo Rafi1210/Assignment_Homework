@@ -1,0 +1,40 @@
+
+//Grading multiple choice test
+
+package homework_2_Array;
+
+import java.util.Scanner;
+
+public class Grading_multiple_choice_array {
+
+	public static void main(String[] args) {
+
+		String[][] answers = new String[10][10];
+		Scanner myScanner = new Scanner(System.in);
+		String[] keys = {"DBDCCDAEAD"};
+
+		int index ;
+		System.out.println("Enter number of index : ");
+		index = myScanner.nextInt();
+		for (int row = 0; row < index; row++) {
+			for (int col = 0; col < answers.length; col++) {
+				System.out.print("arr["+ row +"]["+col+"] = ");
+				answers[row][col] =  myScanner.next();
+			}
+		}
+		
+	
+		for (int row = 0; row < answers.length; row++) {
+			int count =0;
+			for (int col = 0; col < answers[row].length; col++) {
+				if (answers[row][col]==keys[col]) {
+					count++;
+				}
+			}
+			System.out.println("Student "+row+" - "+count+" correct MCQ.");
+
+		}
+
+	}
+
+}

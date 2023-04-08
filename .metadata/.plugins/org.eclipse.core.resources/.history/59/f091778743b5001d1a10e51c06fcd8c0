@@ -1,0 +1,41 @@
+package practice;
+
+import java.util.Scanner;
+
+class std{
+std() {
+		// TODO Auto-generated constructor stub
+	}
+Scanner input = new Scanner(System.in);
+
+
+int id;
+double cg;
+void input(int i, double c) {
+	id = i;
+	cg = c;
+}
+
+void display() {
+	System.out.println(id+" "+cg);
+}
+
+std[] s = new std[5];
+int i;{
+for(i = 0; i < s.length; i++) {
+	s[i] = new std();
+	int id = input.nextInt();
+	double cg = input.nextDouble();
+	s[i].input(id, cg);
+	s[i].display();
+}
+}
+}
+//public class std {
+//
+//	public static void main(String[] args) {
+//
+//		
+//	}
+//
+//}

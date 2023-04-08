@@ -1,0 +1,38 @@
+
+//Initializing arrays with random values 
+
+package homework_2_Array;
+
+import java.util.*;
+
+public class OneD2_random_arr {
+
+	public static void main(String[] args) {
+		
+		int[] array = new int[100];  
+
+		int index;  
+		Scanner input =new Scanner(System.in);  
+		System.out.print("Enter the number of elements you want to store: ");  
+		index = input.nextInt();  
+		System.out.println("Enter the elements of the array: ");  
+		//reading the array elements from the user   
+
+		for(int i=0; i<index; i++)  
+		{  
+		array[i] = input.nextInt();  
+		}  
+		System.out.println("Array elements are: ");  
+	// accessing array elements using the for loop  
+		
+		
+		
+		
+		for (int i=0; i<index ;i++)   
+		{  
+			array[i] = (int) (1+Math.random()*(10*100000));
+		    System.out.println("array["+i+"] = "+array[i]);  
+		}
+	}
+
+}

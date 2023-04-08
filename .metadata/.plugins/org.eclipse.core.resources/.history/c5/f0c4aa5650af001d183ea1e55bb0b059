@@ -1,0 +1,10 @@
+package homework_2_Array;
+
+public class TwoD2_print_arr {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

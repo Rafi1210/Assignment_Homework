@@ -1,0 +1,30 @@
+package practice;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		
+		//for std class.....
+//		Scanner input = new Scanner(System.in);
+//		std s1, s2;
+//		s1 = new std();
+//		s1.id = 1;
+//		s1.cg = 3.0;      //fixed value 
+		
+//		s1.id = input.nextInt();
+//		s1.cg = input.nextDouble();  //input values
+		
+//		int id = input.nextInt();
+//		double cg = input.nextDouble();
+//		s1.input(id, cg);
+//		s1.display();
+		
+		
+		std s1, s2;
+		s1 = new std();
+		s2 = new std();
+	}
+
+}

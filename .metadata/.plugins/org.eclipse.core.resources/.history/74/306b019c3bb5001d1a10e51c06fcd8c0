@@ -1,0 +1,17 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		Student s1, s2;
+		s1 = new Student();
+		s1.id = 1;
+		s1.cg = 3.0;
+		s1.display();
+	}
+
+}
