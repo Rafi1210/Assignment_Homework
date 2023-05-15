@@ -1,14 +1,21 @@
 package association;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.InputMismatchException;
+
+import project.Customer;
+import project.Salesman;
+import project.User;
+
 public class Faculty {
 
 	private int facultyId;
 	private String facultyName;
 	private String facultyPosition;
 	
-	Faculty() {
-		
-	}
+	Faculty() {}
 	Faculty(int facultyId, String facultyName, String facultyPosition) {
 		this.facultyId=facultyId;
 		this.facultyName=facultyName;
@@ -40,3 +47,14 @@ public class Faculty {
 		return "FacultyId : "+facultyId+" FacultyName : "+facultyName +" FacultyPosition : "+facultyPosition ;			
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -37,7 +37,6 @@ public class Main {
 				
 							System.out.println("Choose option - ");
 							int addoption = inpScanner.nextInt();	
-								
 							
 								switch (addoption) {
 								case 1: {
@@ -108,7 +107,7 @@ public class Main {
 								}
 							}	
 						break;
-					}
+					}  
 							
 					
 			
@@ -355,7 +354,7 @@ public class Main {
 						        String courseid = inpScanner.next();   
 						        System.out.println("Course ID\t"+"Course Name\t"+"Course Credit");
 						        for (int j = 0; j < courses.size(); j++) {
-						                if (courseid == courses.get(j).getCourseId()) {
+						                if (courseid.equals( courses.get(j).getCourseId())) {
 						                	System.out.print(courses.get(j).getCourseId()+"\t\t");
 						                	System.out.print(courses.get(j).getCourseTitle()+"\t\t");
 											System.out.print(courses.get(j).getCredit()+"\t");
@@ -388,12 +387,13 @@ public class Main {
 								
 								 System.out.println("Enter Course ID to print student list and faculty information of a course - ");
 							        String  courseid = inpScanner.next();  
-				                	Course c = new Course();
+							        
+				                	Course c = new Course(courseid, courseid, null);
 
 							        System.out.println("Student List - ");
 
 							        for (int j = 0; j < courses.size(); j++) {
-							                if (courseid==courses.get(j).getCourseId()){
+							                if (courseid.equals(courses.get(j).getCourseId())){
 							                	
 							                	courses.get(j).printstudentlist();   
 							                }
@@ -405,11 +405,11 @@ public class Main {
 							        
 							        System.out.println("Faculty Info - ");
 							    	c.getFaculty().facultydisplay();
-							    	
 							        break;
-							}
+									}
+							
 							case 8 :{
-								
+
 								 System.out.println("Enter Student ID to print courses taken by a student - ");
 							        int studentid = inpScanner.nextInt();   
 							        System.out.println("Courses taken by a student - ");
@@ -613,8 +613,8 @@ public class Main {
 					}
 							
 				}
-					if (!exit) {
-		            }	
+//					if (!exit) {
+//		            }	
 					  System.out.println("Goodbye!");
 			}
 		

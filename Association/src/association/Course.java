@@ -7,10 +7,9 @@ public class Course {
 	private String courseTitle;
 	private double credit;
 	
-	private ArrayList<Student> students = new ArrayList<Student>(40);
+	private ArrayList<Student> students;
 	private int numberOfStudents = 0;
 	private Faculty faculty;
-//	private Course course;
 	
 	public Course(){		
 	}
@@ -18,7 +17,15 @@ public class Course {
 	{
 		this.courseId=courseId;
 		this.courseTitle=courseTitle;
-		this.credit=credit;		
+		this.credit= credit;
+	}
+	public Course(String courseId,String courseTitle, Faculty faculty)
+	{
+		this.courseId=courseId;
+		this.courseTitle=courseTitle;
+		this.faculty=faculty;
+		students  = new ArrayList<Student>(40);
+		
 	}
 	
 	public String getCourseId() {

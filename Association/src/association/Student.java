@@ -6,18 +6,11 @@ public class Student {
 	private int studentid;
 	private String studentname;
 	private double studentCGPA;
+	
 	private ArrayList<Course> courses = new ArrayList<Course>();
     private int numberOfcourses = 0;
 	
 	Student(){	
-	}
-	
-	public int getNumberOfcourses() {
-		return numberOfcourses;
-	}
-
-	public void setNumberOfcourses(int numberOfcourses) {
-		this.numberOfcourses = numberOfcourses;
 	}
 
 	Student(int studentid,String studentname, double studentCGPA){
@@ -26,6 +19,14 @@ public class Student {
 		this.studentCGPA = studentCGPA;
 	}
 
+	public int getNumberOfcourses() {
+		return numberOfcourses;
+	}
+
+	public void setNumberOfcourses(int numberOfcourses) {
+		this.numberOfcourses = numberOfcourses;
+	}
+	
 	public int getStudentid() {
 		return studentid;
 	}
@@ -54,7 +55,16 @@ public class Student {
     {
 		return "Studentid : "+studentid+" Studentname"+studentname +" StudentCGPA : "+studentCGPA ;
     }
+    public void addCourse(Course course) {
+        this.courses.add(course);
+    }
+
+    public void getCourseList() {
+    for (Course c : courses) {
+        System.out.println(c.getCourseTitle());
+    }
     
+    }
     
     public void displaytakenCourses() {
         for(Course c : courses) {
